@@ -1,0 +1,239 @@
+.search-results {
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
+  padding: 100px 50px 50px;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.search-header h2 {
+  font-size: 2.5rem;
+  color: #2a7a4b;
+  margin-bottom: 10px;
+}
+
+.search-header p {
+  color: lightgray;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.clear-search {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clear-search:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);
+}
+
+.search-loading {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #333;
+  border-top: 4px solid #2a7a4b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.no-results h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.no-results p {
+  color: lightgray;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.search-suggestions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-suggestions span {
+  background-color: #2a7a4b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-suggestions span:hover {
+  background-color: #369e62;
+  transform: translateY(-1px);
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-result-item {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+}
+
+.search-result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(42, 122, 75, 0.2);
+  border-color: #2a7a4b;
+}
+
+.search-result-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.search-result-details h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.search-result-price {
+  color: #2a7a4b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.search-result-colors {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.search-color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.search-result-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword-tag {
+  background-color: #333;
+  color: lightgray;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+/* Search input enhancements */
+.search {
+  position: relative;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.clear-search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-loading-indicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mini-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #666;
+  border-top: 2px solid #2a7a4b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .search-results {
+    padding: 80px 20px 30px;
+  }
+  
+  .search-header h2 {
+    font-size: 2rem;
+  }
+  
+  .search-results-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .search-suggestions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
