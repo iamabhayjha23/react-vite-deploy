@@ -5,7 +5,7 @@ import { getAuth } from 'firebase/auth'; // Add this import
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCE6ejiZ08YmbSXkBsKrgoZjLAmkZVSadg",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "nike-shoe-store-200b9.firebaseapp.com",
   projectId: "nike-shoe-store-200b9",
   storageBucket: "nike-shoe-store-200b9.firebasestorage.app",
